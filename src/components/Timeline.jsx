@@ -47,7 +47,7 @@ export default function Timeline() {
       <h1 className="title">Our Story 💘</h1>
 
       <p className="days-counter">
-        {DAYS_TOGETHER} days of us 💖
+        {DAYS_TOGETHER} days of us ❤️
       </p>
 
       {memories.map((m, i) => (
