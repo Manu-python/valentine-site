@@ -62,6 +62,11 @@ export default function Timeline() {
         </div>
       ))}
 
+      {/* Timeline footer */}
+      <p className="timeline-footer">
+        This timeline is still being written ✨
+      </p>
+
       {/* Valentine Question Section */}
       <div className="valentine-section">
         <button
@@ -71,11 +76,6 @@ export default function Timeline() {
           💌 One last question…
         </button>
       </div>
-
-      {/* Timeline footer */}
-      <p className="timeline-footer">
-        This timeline is still being written ✨
-      </p>
 
       {/* Modal */}
       <ValentineModal
