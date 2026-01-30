@@ -32,7 +32,7 @@ export default function ValentineModal({ isOpen, onClose }) {
       <div className="modal-card" onClick={(e) => e.stopPropagation()}>
         {!accepted ? (
           <>
-            <h1>Will you be my Valentine? 💖</h1>
+            <h1>Will you be my VALEntine? 💖</h1>
 
             <div className="modal-buttons">
               <button className="yes-btn" onClick={fireConfetti}>
@@ -50,7 +50,7 @@ export default function ValentineModal({ isOpen, onClose }) {
           <>
             <h1>YAY!! 🎉💞</h1>
             <p style={{ fontSize: "1.1rem" }}>
-              I can’t wait to spend Valentine’s Day with you 🥰
+              I can’t wait to spend VALEntine’s Day with you 🥰
             </p>
           </>
         )}
