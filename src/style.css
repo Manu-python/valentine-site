@@ -1,42 +1,44 @@
-body {
-  margin: 0;
-  font-family: "Segoe UI", system-ui, sans-serif;
-  background: #fff7fb;
-  color: #333;
+/* Global reset */
+* {
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", Arial, sans-serif;
+  background: #fff7fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Timeline container */
 .timeline {
   max-width: 700px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
 }
 
+/* Title */
 .title {
   text-align: center;
   font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Days together counter */
+.days-counter {
+  text-align: center;
+  font-size: 1.1rem;
+  opacity: 0.75;
+  margin-top: -1.2rem;
   margin-bottom: 3rem;
 }
 
+/* Memory cards */
 .memory {
   margin-bottom: 4rem;
   text-align: center;
-}
-
-.memory img {
-  width: 100%;
-  border-radius: 20px;
-  margin-bottom: 1rem;
-}
-
-.memory h2 {
-  margin: 0.5rem 0;
-}
-
-.memory p {
-  opacity: 0.8;
-}
-
-.memory {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -47,9 +49,26 @@ body {
   transform: translateY(0);
 }
 
+.memory img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.memory h2 {
+  margin: 0.6rem 0 0.3rem;
+  font-size: 1.5rem;
+}
+
+.memory p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Valentine button section */
 .valentine-section {
   text-align: center;
-  margin: 6rem 0 3rem;
+  margin: 6rem 0 2rem;
 }
 
 .valentine-btn {
@@ -69,6 +88,17 @@ body {
   box-shadow: 0 14px 35px rgba(255, 95, 162, 0.45);
 }
 
+/* Timeline footer */
+.timeline-footer {
+  text-align: center;
+  font-size: 1rem;
+  opacity: 0.6;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+/* Modal backdrop */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -79,6 +109,7 @@ body {
   z-index: 1000;
 }
 
+/* Modal card */
 .modal-card {
   background: white;
   padding: 3rem 2.5rem;
@@ -91,9 +122,10 @@ body {
 
 .modal-card h1 {
   font-size: 1.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
+/* Modal buttons */
 .modal-buttons {
   display: flex;
   flex-direction: column;
@@ -115,6 +147,7 @@ body {
   color: #ff5fa2;
 }
 
+/* Modal animation */
 @keyframes popIn {
   from {
     transform: scale(0.85);
@@ -123,5 +156,21 @@ body {
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.1rem;
+  }
+
+  .memory {
+    margin-bottom: 3rem;
+  }
+
+  .valentine-btn {
+    font-size: 1.15rem;
+    padding: 0.9rem 2.2rem;
   }
 }

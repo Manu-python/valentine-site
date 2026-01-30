@@ -2,9 +2,20 @@ import { useEffect, useRef, useState } from "react";
 import { memories } from "../data/memories";
 import ValentineModal from "./ValentineModal";
 
+// Helper function to calculate days together
+function daysTogether(startDate) {
+  const start = new Date(startDate);
+  const today = new Date();
+  const diffTime = today - start;
+  return Math.floor(diffTime / (1000 * 60 * 60 * 24));
+}
+
 export default function Timeline() {
   const itemsRef = useRef([]);
   const [showModal, setShowModal] = useState(false);
+
+  // CHANGE THIS DATE ⬇️ (YYYY-MM-DD)
+  const DAYS_TOGETHER = daysTogether("2025-05-30");
 
   // Scroll fade / slide animation
   useEffect(() => {
@@ -26,7 +37,7 @@ export default function Timeline() {
     return () => observer.disconnect();
   }, []);
 
-  // Lock background scrolling when modal is open
+  // Lock background scroll when modal is open
   useEffect(() => {
     document.body.style.overflow = showModal ? "hidden" : "auto";
   }, [showModal]);
@@ -34,6 +45,10 @@ export default function Timeline() {
   return (
     <div className="timeline">
       <h1 className="title">Our Story 💘</h1>
+
+      <p className="days-counter">
+        {DAYS_TOGETHER} days of us 💖
+      </p>
 
       {memories.map((m, i) => (
         <div
@@ -56,6 +71,11 @@ export default function Timeline() {
           💌 One last question…
         </button>
       </div>
+
+      {/* Timeline footer */}
+      <p className="timeline-footer">
+        This timeline is still being written ✨
+      </p>
 
       {/* Modal */}
       <ValentineModal

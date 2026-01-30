@@ -51,6 +51,7 @@ export default function ValentineModal({ isOpen, onClose }) {
             <h1>YAY!! 🎉💞</h1>
             <p style={{ fontSize: "1.1rem" }}>
               I can’t wait to spend VALEntine’s Day with you 🥰
+              {/* Add a custome message here later */}
             </p>
           </>
         )}
