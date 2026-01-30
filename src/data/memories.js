@@ -14,4 +14,9 @@ export const memories = [
     text: "And somehow, I like you even more now ❤️",
     image: "/photos/3.jpg",
   },
+  {
+    title: "Test",
+    text: "This is a test memory.",
+    image: "/photos/test.jpg",
+  }
 ];
