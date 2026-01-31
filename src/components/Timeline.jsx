@@ -64,7 +64,7 @@ export default function Timeline() {
 
       {/* Timeline footer */}
       <p className="timeline-footer">
-        This timeline is still being written ✨
+        Y esta historia se seguirá escribiendo 🤭❤️
       </p>
 
       {/* Valentine Question Section */}
